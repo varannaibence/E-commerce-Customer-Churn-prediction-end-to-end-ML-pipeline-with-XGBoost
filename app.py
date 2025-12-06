@@ -48,6 +48,7 @@ def home(): # Health check endpoint
 
 # Define the prediction endpoint
 @app.post("/predict")
+
 def predict_churn(data: CustomerData):
     # 1. Convert the input data to a DataFrame
     input_df = pd.DataFrame([data.model_dump()])

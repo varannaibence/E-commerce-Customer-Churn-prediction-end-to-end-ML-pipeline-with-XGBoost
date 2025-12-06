@@ -9,10 +9,10 @@ FROM python:3.9-slim
 WORKDIR /app
 
 #Copying the requirements.txt file from the host machine to the working directory in the container.
-COPY requirements.txt .
+COPY requirements-api.txt .
 
 #Installing the Python dependencies specified in requirements.txt.
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-api.txt
 
 #Copying the entire contents of the current directory on the host machine to the working directory in the container.
 COPY . .
